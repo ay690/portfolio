@@ -7,8 +7,8 @@ import { Github } from '../components/AllSvgs';
 const Box = styled(motion.li)`
  width: 16rem;
  height: 40vh;
- background-color: ${(props) => props.theme.text};
- color: ${props => props.theme.body};
+ background-color: white;
+ color: black;
  padding: 1.5rem 2rem;
  margin-right: 8rem;
  border-radius: 0 50px 0 50px;
@@ -19,9 +19,9 @@ const Box = styled(motion.li)`
  transition: all 0.2s ease;
 
  &:hover{
-  background-color: ${props => props.theme.body};
-  color:${props => props.theme.text};
-  border: 1px solid ${(props) => props.theme.text};
+  background-color: black;
+  color:white;
+  border: 1px solid white;
  }
 `;
 
@@ -36,12 +36,12 @@ font-weight: 500;
 `;
 
 const Tags = styled.div`
-border-top: 2px solid ${props =>props.theme.body};
+border-top: 2px solid black;
 padding-top: 0.5rem;
 display:flex;
 flex-wrap:wrap;
 ${Box}:hover &{
-border-top: 2px solid ${props =>props.theme.text};
+border-top: 2px solid white;
 }
 `;
 
@@ -56,16 +56,16 @@ justify-content: space-between;
 `;
 
 const Link = styled.a`
-background-color: ${props =>props.theme.body};
-color: ${props =>props.theme.text};
+background-color: black;
+color: white;
 text-decoration: none;
 padding:0.5rem calc(2rem + 2vw);
 border-radius: 0 20px 0 50px;
 font-size:calc(1em + 0.5vw);
 
 ${Box}:hover &{
-  background-color: ${props =>props.theme.text};
-  color: ${props =>props.theme.body};
+  background-color: white;
+  color: black;
 
 }
 `;

@@ -26,6 +26,10 @@ z-index:10;
 &>*:nth-child(5){
     animation-delay: 0.8s;
 }
+ @media screen and (max-width: 576px) {
+   top: 15%;
+   left: calc(1rem + 2vw);
+ }
 `
 
 const play = keyframes`
@@ -38,6 +42,7 @@ const play = keyframes`
 100%{
     transform:scaleY(1);
 }
+
 `
 const Line = styled.span`
 background: ${props => props.theme.text};
@@ -47,7 +52,7 @@ animation:${play} 1s ease infinite;
 animation-play-state: ${props => props.click ? "running" : "paused"};
 height: 1rem;
 width: 2px;
-margin:0 0.1rem
+margin:0 0.1rem;
 `
 
 const SoundBar = () => {

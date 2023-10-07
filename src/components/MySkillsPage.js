@@ -16,6 +16,16 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
+  
+  @media screen and (max-width: 786px) {
+    flex-direction: column-reverse;
+    gap: 1em;
+    scroll-behavior: smooth;
+    padding-top: 200px;
+    padding-bottom: 20px;
+  }
+
 `;
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
@@ -23,9 +33,9 @@ const Main = styled.div`
   background-color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 30vw;
-  height: 60vh;
+  height: 50vh;
   z-index: 3;
-  line-height: 1.5;
+  line-height: 1.2;
   font-family: "Ubuntu Mono", monospace;
   display: flex;
   flex-direction: column;
@@ -51,6 +61,10 @@ const Title = styled.h2`
   & > *:first-child {
     margin-right: 1rem;
   }
+
+  @media screen and (max-width: 786px) {
+    font-size: 1em;
+  }
 `;
 
 const Description = styled.div`
@@ -70,6 +84,10 @@ const Description = styled.div`
   ul,
   p {
     margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 786px) {
+    font-size: calc(0.5em + 1.1vw);
   }
 `;
 
@@ -110,19 +128,19 @@ const MySkillsPage = () => {
             Frontend Developer
           </Title>
           <Description>
-            I value business or brand for which i'm creating, thus i enjoy
+            I value business or brand for which I'm creating, thus i enjoy
             bringing new ideas to life.
           </Description>
           <Description>
             <strong>Skills</strong>
             <p>
-              Html, Css, Js, React, Redux, Redux-Toolkit, Sass, Bootstrap,
-              Tailwind, AntD, Material UI, MONGODB, Express etc.
+              Html, Js, React, Redux, Sass,
+              MONGODB,  etc.
             </p>
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, Github, CodeSandBox, etc.</p>
+            <p>VScode, Github, etc.</p>
           </Description>
         </Main>
         <BigTitle text="SKILLS" top="80%" right="30%" />

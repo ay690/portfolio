@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import PowerButton from "../subComponents/PowerButton";
 import LogoComponent from "../subComponents/LogoComponent";
@@ -125,14 +125,40 @@ const DarkDiv = styled.div`
   width: ${(props) => (props.click ? "50%" : "0%")};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
+  
+  @media screen and (max-width: 576px) {
+    left: 0;
+    right: 0;
+    bottom: 50%;
+    height: ${(props) => (props.click ? "55%" : "0%")};
+    width: ${(props) => (props.click ? "100%" : "0%")};
+  }
 `;
 
 const Main = () => {
   const [click, setClick] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
   const handleClick = () => setClick(!click);
+
   const handleSayHiClick = () => {
     window.location.href = 'mailto:aniketyadav690@gmail.com';
   };
+
+  useEffect(() => {
+   
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 576)
+    }
+    updateScreenSize();
+    window.addEventListener('resize', updateScreenSize);
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize);
+    }
+  }, []);
+
+
   return (
     <MainContainer>
       <Container>
@@ -144,8 +170,8 @@ const Main = () => {
         <Center click={click}>
           <YinYang
             onClick={() => handleClick()}
-            width={click ? 120 : 200}
-            height={click ? 120 : 200}
+            width={click ? 50 : 150}
+            height={click ? 50 : 150}
             fill="currentColor"
           />
           <span>Click here</span>
@@ -155,23 +181,21 @@ const Main = () => {
           target="_blank"
           onClick={handleSayHiClick}
         >
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} 
+          style={{color: isSmallScreen ? "Gray" : "Gray"}}
+          >
             Say Hi....
           </motion.h2>
         </Contact>
-        {/* <BLOG to="/blog">
-          <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-            Blog
-          </motion.h2>
-        </BLOG> */}
-        <WORK to="/work" click={click}>
+      
+        <WORK to="/work" >
           <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             Work
           </motion.h2>
         </WORK>
 
         <BottomBar>
-          <ABOUT to="/about" click={click}>
+          <ABOUT to="/about" >
             <motion.h2 whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
               About.
             </motion.h2>

@@ -13,7 +13,7 @@ import { YinYang } from "./AllSvgs";
 import BigTitlte from "../subComponents/BigTitle";
 
 const Box = styled.div`
-  background-color: ${(props) => props.theme.body};
+  background-color: black;
 
   height: 400vh;
   position: relative;
@@ -56,6 +56,7 @@ const container = {
 const WorkPage = () => {
   const ref = useRef(null);
   const yinyang = useRef(null);
+ 
 
   useEffect(() => {
     let element = ref.current;

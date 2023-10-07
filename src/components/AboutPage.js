@@ -9,7 +9,7 @@ import astonaut from '../assets/Images/spaceman.png'
 import ParticleComponent from '../subComponents/ParticleComponent'
 
 const Box = styled.div`
- background-color: ${props => props.theme.body};
+ background-color: black;
  width: 100vw;
  height: 100vh;
  position: relative;
@@ -30,18 +30,18 @@ const float = keyframes`
 
 const Main = styled.div`
  border: 2px solid ${props => props.theme.text};
- color: ${props => props.theme.text};
- padding: 2rem;
+ color: rgb(255,255,255);
+ padding: 1.5rem;
  width: 50vw;
  height: 55vh;
  line-height: 1.5;
- z-index: 3;
+ z-index: 5;
  display: flex;
  align-items: center;
- font-size: calc(0.3rem + 1vw);
- backdrop-filter: blur(4px);
+ font-size: calc(0.5rem + 1.1vw);
+ backdrop-filter: blur(7px);
  position: absolute;
- top: 10rem;
+ top: 8rem;
  left: calc(5rem + 5vw);
  font-family: 'Ubuntu Mono', monospace;
  font-style: italic;
@@ -53,7 +53,7 @@ top: 10%;
 right: 5%;
 animation: ${float} 4s ease infinite;
 img{
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 `;
@@ -71,11 +71,11 @@ const AboutPage = () => {
         <img src={astonaut} alt='spaceman'/>
       </Spaceman>
       <Main>
-      Greetings! 👋 I'm a passionate front-end developer hailing from the vibrant landscapes of India.
+      Greetings! 👋 I'm a passionate front-end developer from India, exploring the frontend tech world.
       <br/><br/>
-      My playground is the entire frontend stack, and I thrive on exploring new technologies and weaving them into exciting projects. When I'm not coding, you'll often find me on two wheels, cruising through scenic routes, or lost in the pages of captivating books.
+      I love coding and integrating new tech into exciting projects. Outside work, I enjoy riding and reading.
       <br/><br/>
-      I firmly believe that everything we create is a form of art, a canvas for our consciousness to express itself. Let's connect and share our creative endeavors through my social links.
+      I see our creations as art—a canvas for our thoughts. Let's connect and share on my social links.
       </Main>
       <BigTitle text="ABOUT" top="10%" left="5%" />
     </Box>
