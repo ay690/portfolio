@@ -81,6 +81,13 @@ const Text = styled.div`
     font-size: calc(0.5rem + 1.5vw);
     font-weight: 300;
   }
+  h1, h3 {
+    font-family: Helvetica, Arial, sans-serif; 
+  }
+
+  h6 {
+    font-family: 'Poppins', sans-serif; 
+  }
   @media screen and (max-width: 576px){
     display: flex;
     align-items: center;
@@ -90,11 +97,18 @@ const Text = styled.div`
     padding: 1rem;
    
     & > *:last-child{
-      font-size: calc(0.1em + 4vw);
+      font-size: calc(0.1em + 3vw);
       flex-wrap: wrap;
-      padding-top: 20px;
+      padding-top: 15px;
       justify-content: center;
+      align-items: center;
       max-width: auto;
+    }
+    h1 {
+      font-size: 33px;
+    }
+    h3 {
+      font-size: 22px; 
     }
   }
 `;
