@@ -12,6 +12,9 @@ const Logo = styled.h1`
   left: 2rem;
   top: 2rem;
   z-index: 3;
+  @media screen and (max-width: 576px) {
+    left: 1.1rem;
+  }
 `;
 
 const LogoComponent = (props) => {

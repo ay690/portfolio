@@ -23,7 +23,7 @@ const Box = styled.div`
     gap: 1em;
     scroll-behavior: smooth;
     padding-top: 200px;
-    padding-bottom: 20px;
+    padding-bottom: 110px;
   }
 
 `;
@@ -43,6 +43,10 @@ const Main = styled.div`
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
+  }
+  @media screen and (max-width: 786px) {
+    width:  47vw;
+    margin-left: 1.3rem;
   }
 `;
 

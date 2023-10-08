@@ -45,6 +45,12 @@ const Main = styled.div`
  left: calc(5rem + 5vw);
  font-family: 'Ubuntu Mono', monospace;
  font-style: italic;
+ @media screen and (max-width: 786px) {
+   width: 56vw;
+   margin-right: 20px;
+   top: 12rem;
+   left: 5rem;
+ }
 `;
 
 const Spaceman = styled.div`
@@ -53,8 +59,26 @@ top: 10%;
 right: 5%;
 animation: ${float} 4s ease infinite;
 img{
-  width: 75%;
+  width: 70%;
   height: auto;
+}
+
+@media screen and (max-width: 586px) {
+  top: 50%;
+  left: 80%;
+  img{
+    width: 80%;
+  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  top: 10%;
+  left: 80%;
+  img{
+    width: 100%;
+  
+  }
 }
 `;
 
