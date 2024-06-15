@@ -17,7 +17,7 @@ const Box = styled.div`
   justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
-  
+
   @media screen and (max-width: 786px) {
     flex-direction: column-reverse;
     gap: 1em;
@@ -25,7 +25,6 @@ const Box = styled.div`
     padding-top: 200px;
     padding-bottom: 110px;
   }
-
 `;
 const Main = styled.div`
   border: 2px solid ${(props) => props.theme.text};
@@ -45,7 +44,7 @@ const Main = styled.div`
     background-color: ${(props) => props.theme.text};
   }
   @media screen and (max-width: 786px) {
-    width:  47vw;
+    width: 47vw;
     margin-left: 1.3rem;
   }
 `;
@@ -137,10 +136,7 @@ const MySkillsPage = () => {
           </Description>
           <Description>
             <strong>Skills</strong>
-            <p>
-              Html, Js, React, Redux, Sass,
-              MONGODB,  etc.
-            </p>
+            <p>Html, Js, React, Redux, Sass, Tailwind, MONGODB, etc.</p>
           </Description>
           <Description>
             <strong>Tools</strong>
